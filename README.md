@@ -1,4 +1,4 @@
-Git Commands
+Git Komutları
 ============
 
 ## Translated Versions
@@ -6,67 +6,64 @@ Git Commands
 
 ___
 
-_A list of my commonly used Git commands_
+_Sık kullanılan Git komutlarımın listesi_
 
-*If you are interested in my Git aliases, have a look at my `.bash_profile`, found here: https://github.com/joshnh/bash_profile/blob/master/.bash_profile*
 
---
-
-### Getting & Creating Projects
+### Proje Alma ve Oluşturma
 
 | Command | Description |
 | ------- | ----------- |
-| `git init` | Initialize a local Git repository |
-| `git clone ssh://git@github.com/[username]/[repository-name].git` | Create a local copy of a remote repository |
+| `git init` | Yerel Git deposunu başlat |
+| `git clone ssh://git@github.com/[username]/[repository-name].git` | Uzak bir deponun yerel bir kopyasını oluşturun |
 
 ### Basic Snapshotting
 
 | Command | Description |
 | ------- | ----------- |
-| `git status` | Check status |
-| `git add [file-name.txt]` | Add a file to the staging area |
-| `git add -A` | Add all new and changed files to the staging area |
-| `git commit -m "[commit message]"` | Commit changes |
-| `git rm -r [file-name.txt]` | Remove a file (or folder) |
+| `git status` | Durumu kontrol et |
+| `git add [file-name.txt]` | Hazırlama alanına bir dosya ekleyin. |
+| `git add -A` | Tüm yeni ve değiştirilmiş dosyaları hazırlama alanına ekle |
+| `git commit -m "[commit message]"` | Değişiklikleri kabul et |
+| `git rm -r [file-name.txt]` | Bir dosyayı (veya klasörü) kaldırın |
 
 ### Branching & Merging
 
 | Command | Description |
 | ------- | ----------- |
-| `git branch` | List branches (the asterisk denotes the current branch) |
-| `git branch -a` | List all branches (local and remote) |
-| `git branch [branch name]` | Create a new branch |
-| `git branch -d [branch name]` | Delete a branch |
-| `git push origin --delete [branch name]` | Delete a remote branch |
-| `git checkout -b [branch name]` | Create a new branch and switch to it |
-| `git checkout -b [branch name] origin/[branch name]` | Clone a remote branch and switch to it |
-| `git branch -m [old branch name] [new branch name]` | Rename a local branch |
-| `git checkout [branch name]` | Switch to a branch |
-| `git checkout -` | Switch to the branch last checked out |
-| `git checkout -- [file-name.txt]` | Discard changes to a file |
-| `git merge [branch name]` | Merge a branch into the active branch |
-| `git merge [source branch] [target branch]` | Merge a branch into a target branch |
-| `git stash` | Stash changes in a dirty working directory |
-| `git stash clear` | Remove all stashed entries |
+| `git branch` | Dalları listele (yıldız, geçerli dalı gösterir) |
+| `git branch -a` | Tüm dalları listele (yerel ve uzak) |
+| `git branch [branch name]` | Yeni dal oluştur |
+| `git branch -d [branch name]` | Dal sil |
+| `git push origin --delete [branch name]` | Uzak bir dalı sil |
+| `git checkout -b [branch name]` | Yeni bir şube oluştur ve ona geç |
+| `git checkout -b [branch name] origin/[branch name]` | Uzak bir dalı klonla ve ona geç |
+| `git branch -m [old branch name] [new branch name]` | Yerel bir dalı yeniden adlandır |
+| `git checkout [branch name]` | Bir dala geç |
+| `git checkout -` | En son teslim edilen dala geç |
+| `git checkout -- [file-name.txt]` | Bir dosyadaki değişiklikleri at |
+| `git merge [branch name]` | Bir dalı etkin dalda birleştirme |
+| `git merge [source branch] [target branch]` | Bir dalı hedef dalda birleştirme |
+| `git stash` | Kirli bir çalışma dizininde saklamak değişiklikleri |
+| `git stash clear` | Tüm saklanan girişleri kaldır |
 
-### Sharing & Updating Projects
-
-| Command | Description |
-| ------- | ----------- |
-| `git push origin [branch name]` | Push a branch to your remote repository |
-| `git push -u origin [branch name]` | Push changes to remote repository (and remember the branch) |
-| `git push` | Push changes to remote repository (remembered branch) |
-| `git push origin --delete [branch name]` | Delete a remote branch |
-| `git pull` | Update local repository to the newest commit |
-| `git pull origin [branch name]` | Pull changes from remote repository |
-| `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Add a remote repository |
-| `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Set a repository's origin branch to SSH |
-
-### Inspection & Comparison
+### Projeleri & Paylaşma ve Güncelleme
 
 | Command | Description |
 | ------- | ----------- |
-| `git log` | View changes |
-| `git log --summary` | View changes (detailed) |
-| `git diff [source branch] [target branch]` | Preview changes before merging |
+| `git push origin [branch name]` | Bir dalı uzak havuzunuza itin |
+| `git push -u origin [branch name]` | Değişiklikleri uzak havuza doğru itin (ve dalı hatırlayın)) |
+| `git push` | Değişiklikleri uzak havuza itin (hatırlanan dal) |
+| `git push origin --delete [branch name]` | Uzak bir dalı sil |
+| `git pull` | Yerel veri havuzunu en yeni işleme gönder |
+| `git pull origin [branch name]` | Uzak havuzdan değişiklikleri çekin |
+| `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Uzak bir depo ekle |
+| `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Bir havuzun orijin şubesini SSH'ye ayarla |
+
+### Muayene & Karşılaştırma
+
+| Command | Description |
+| ------- | ----------- |
+| `git log` | Değişiklikleri görüntüle |
+| `git log --summary` | Değişiklikleri görüntüle (ayrıntılı) |
+| `git diff [source branch] [target branch]` | Birleştirmeden önce değişiklikleri önizle |
 
